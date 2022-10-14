@@ -36,4 +36,10 @@ public interface ChannelCountOrBuilder extends
    * @return The count.
    */
   int getCount();
+
+  /**
+   * <code>int64 offset = 5[json_name = "o", jstype = JS_STRING];</code>
+   * @return The offset.
+   */
+  long getOffset();
 }

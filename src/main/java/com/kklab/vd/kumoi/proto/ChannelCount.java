@@ -70,6 +70,11 @@ private static final long serialVersionUID = 0L;
             count_ = input.readInt32();
             break;
           }
+          case 40: {
+
+            offset_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -173,6 +178,17 @@ private static final long serialVersionUID = 0L;
     return count_;
   }
 
+  public static final int OFFSET_FIELD_NUMBER = 5;
+  private long offset_;
+  /**
+   * <code>int64 offset = 5[json_name = "o", jstype = JS_STRING];</code>
+   * @return The offset.
+   */
+  @java.lang.Override
+  public long getOffset() {
+    return offset_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -199,6 +215,9 @@ private static final long serialVersionUID = 0L;
     if (count_ != 0) {
       output.writeInt32(4, count_);
     }
+    if (offset_ != 0L) {
+      output.writeInt64(5, offset_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -223,6 +242,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, count_);
     }
+    if (offset_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, offset_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -246,6 +269,8 @@ private static final long serialVersionUID = 0L;
         != other.getParticipatorCount()) return false;
     if (getCount()
         != other.getCount()) return false;
+    if (getOffset()
+        != other.getOffset()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -265,6 +290,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getParticipatorCount();
     hash = (37 * hash) + COUNT_FIELD_NUMBER;
     hash = (53 * hash) + getCount();
+    hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getOffset());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -406,6 +434,8 @@ private static final long serialVersionUID = 0L;
 
       count_ = 0;
 
+      offset_ = 0L;
+
       return this;
     }
 
@@ -436,6 +466,7 @@ private static final long serialVersionUID = 0L;
       result.ownerCount_ = ownerCount_;
       result.participatorCount_ = participatorCount_;
       result.count_ = count_;
+      result.offset_ = offset_;
       onBuilt();
       return result;
     }
@@ -496,6 +527,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getCount() != 0) {
         setCount(other.getCount());
+      }
+      if (other.getOffset() != 0L) {
+        setOffset(other.getOffset());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -691,6 +725,37 @@ private static final long serialVersionUID = 0L;
     public Builder clearCount() {
       
       count_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long offset_ ;
+    /**
+     * <code>int64 offset = 5[json_name = "o", jstype = JS_STRING];</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public long getOffset() {
+      return offset_;
+    }
+    /**
+     * <code>int64 offset = 5[json_name = "o", jstype = JS_STRING];</code>
+     * @param value The offset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOffset(long value) {
+      
+      offset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 offset = 5[json_name = "o", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOffset() {
+      
+      offset_ = 0L;
       onChanged();
       return this;
     }
