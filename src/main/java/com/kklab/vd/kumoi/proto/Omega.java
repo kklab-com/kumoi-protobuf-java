@@ -285,115 +285,118 @@ public final class Omega {
       "\n\005block\030\002 \001(\010R\001b\"\007\n\005Close\"\006\n\004Ping\"\006\n\004Pon" +
       "g\"G\n\005Stack\022\026\n\013stack_count\030\002 \001(\005R\001c\022&\n\006fr" +
       "ames\030\003 \003(\0132\023.omega.TransitFrameR\001f\"\037\n\tBr" +
-      "oadcast\022\022\n\007message\030\002 \001(\tR\001m\"N\n\005Hello\022\025\n\n" +
-      "session_id\030\002 \001(\tR\001s\022\024\n\007subject\030\003 \001(\tR\003su" +
-      "b\022\030\n\014subject_name\030\004 \001(\tR\002sn\"E\n\nServerTim" +
-      "e\022\030\n\tunix_nano\030\002 \001(\003B\0020\001R\001n\022\035\n\016unix_time" +
-      "stamp\030\003 \001(\003B\0020\001R\001t\"\250\001\n\026PlaybackChannelMe" +
-      "ssage\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\030\n\010ended_a" +
-      "t\030\003 \001(\003B\0020\001R\002ea\022\023\n\007next_id\030\004 \001(\tR\002ni\022 \n\006" +
-      "volume\030\005 \001(\0162\r.omega.VolumeR\001v\022\020\n\005count\030" +
-      "\006 \001(\005R\001c\022\023\n\007inverse\030\007 \001(\010R\002iv\"\267\001\n\016GetCha" +
-      "nnelMeta\022(\n\004data\030\001 \001(\0132\027.google.protobuf" +
-      ".StructR\001d\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\017\n\004na" +
-      "me\030\003 \001(\tR\001n\022\025\n\006offset\030\004 \001(\003B\0020\001R\001o\022\032\n\ncr" +
-      "eated_at\030\005 \001(\003B\0020\001R\002ca\022\037\n\005skill\030\013 \001(\0132\014." +
-      "omega.SkillR\002sk\"\233\001\n\016SetChannelMeta\022(\n\004da" +
-      "ta\030\001 \001(\0132\027.google.protobuf.StructR\001d\022\026\n\n" +
-      "channel_id\030\002 \001(\tR\002ch\022\017\n\004name\030\003 \001(\tR\001n\022\025\n" +
-      "\006offset\030\004 \001(\003B\0020\001R\001o\022\037\n\005skill\030\013 \001(\0132\014.om" +
-      "ega.SkillR\002sk\"\017\n\rCreateChannel\"\211\003\n\013JoinC" +
-      "hannel\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\017\n\004name\030\003" +
-      " \001(\tR\001n\0226\n\020channel_metadata\030\004 \001(\0132\027.goog" +
-      "le.protobuf.StructR\003chm\022\025\n\nsession_id\030\005 " +
-      "\001(\tR\001s\022\024\n\007subject\030\006 \001(\tR\003sub\022\030\n\014subject_" +
-      "name\030\007 \001(\tR\002sn\0225\n\020session_metadata\030\010 \001(\013" +
-      "2\027.google.protobuf.StructR\002sm\022\016\n\003key\030\t \001" +
-      "(\tR\001k\022\017\n\004role\030\n \001(\tR\001r\022\025\n\006offset\030\013 \001(\003B\002" +
-      "0\001R\001o\022\032\n\ncreated_at\030\014 \001(\003B\0020\001R\002ca\022&\n\rrol" +
-      "eIndicator\030\r \001(\0162\013.omega.RoleR\002ri\022\037\n\005ski" +
-      "ll\030\016 \001(\0132\014.omega.SkillR\002sk\"T\n\014LeaveChann" +
-      "el\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\025\n\nsession_id" +
-      "\030\003 \001(\tR\001s\022\025\n\006offset\030\004 \001(\003B\0020\001R\001o\"M\n\014Clos" +
-      "eChannel\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\016\n\003key\030" +
-      "\003 \001(\tR\001k\022\025\n\006offset\030\004 \001(\003B\0020\001R\001o\",\n\005Skill" +
-      "\022#\n\007tagging\030\001 \001(\0132\016.omega.TaggingR\002tg\"\256\002" +
-      "\n\016ChannelMessage\022\026\n\nchannel_id\030\002 \001(\tR\002ch" +
-      "\022\030\n\014from_session\030\003 \001(\tR\002fs\022\022\n\007message\030\004 " +
-      "\001(\tR\001m\022\025\n\006offset\030\005 \001(\003B\0020\001R\001o\022\024\n\007subject" +
-      "\030\006 \001(\tR\003sub\022\030\n\014subject_name\030\007 \001(\tR\002sn\022\026\n" +
-      "\nsequential\030\010 \001(\010R\002se\022&\n\rroleIndicator\030\t" +
-      " \001(\0162\013.omega.RoleR\002ri\022.\n\010metadata\030\n \001(\0132" +
-      "\027.google.protobuf.StructR\003mta\022\037\n\005skill\030\013" +
-      " \001(\0132\014.omega.SkillR\002sk\"\213\002\n\023ChannelOwnerM" +
-      "essage\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\030\n\014from_s" +
-      "ession\030\003 \001(\tR\002fs\022\022\n\007message\030\004 \001(\tR\001m\022\025\n\006" +
-      "offset\030\005 \001(\003B\0020\001R\001o\022\024\n\007subject\030\006 \001(\tR\003su" +
-      "b\022\030\n\014subject_name\030\007 \001(\tR\002sn\022\026\n\nsequentia" +
-      "l\030\010 \001(\010R\002se\022.\n\010metadata\030\n \001(\0132\027.google.p" +
-      "rotobuf.StructR\003mta\022\037\n\005skill\030\013 \001(\0132\014.ome" +
-      "ga.SkillR\002sk\"\210\001\n\014ChannelCount\022\026\n\nchannel" +
-      "_id\030\001 \001(\tR\002ch\022\027\n\013owner_count\030\002 \001(\005R\002oc\022\036" +
-      "\n\022participator_count\030\003 \001(\005R\002pc\022\020\n\005count\030" +
-      "\004 \001(\005R\001c\022\025\n\006offset\030\005 \001(\003B\0020\001R\001o\"\246\001\n\024Repl" +
-      "ayChannelMessage\022\026\n\nchannel_id\030\002 \001(\tR\002ch" +
+      "oadcast\022\022\n\007message\030\002 \001(\tR\001m\"\250\001\n\005Hello\022\025\n" +
+      "\nsession_id\030\002 \001(\tR\001s\022\024\n\007subject\030\003 \001(\tR\003s" +
+      "ub\022\030\n\014subject_name\030\004 \001(\tR\002sn\022\031\n\014service_" +
+      "name\030\024 \001(\tR\003srn\022\034\n\017service_version\030\025 \001(\t" +
+      "R\003srv\022\037\n\021service_node_name\030\026 \001(\tR\004srnn\"E" +
+      "\n\nServerTime\022\030\n\tunix_nano\030\002 \001(\003B\0020\001R\001n\022\035" +
+      "\n\016unix_timestamp\030\003 \001(\003B\0020\001R\001t\"\250\001\n\026Playba" +
+      "ckChannelMessage\022\026\n\nchannel_id\030\002 \001(\tR\002ch" +
       "\022\030\n\010ended_at\030\003 \001(\003B\0020\001R\002ea\022\023\n\007next_id\030\004 " +
       "\001(\tR\002ni\022 \n\006volume\030\005 \001(\0162\r.omega.VolumeR\001" +
       "v\022\020\n\005count\030\006 \001(\005R\001c\022\023\n\007inverse\030\007 \001(\010R\002iv" +
-      "\"x\n\016GetSessionMeta\022(\n\004data\030\001 \001(\0132\027.googl" +
-      "e.protobuf.StructR\001d\022\025\n\nsession_id\030\002 \001(\t" +
-      "R\001s\022\024\n\007subject\030\003 \001(\tR\003sub\022\017\n\004name\030\004 \001(\tR" +
-      "\001n\"b\n\016SetSessionMeta\022(\n\004data\030\001 \001(\0132\027.goo" +
-      "gle.protobuf.StructR\001d\022\025\n\nsession_id\030\002 \001" +
-      "(\tR\001s\022\017\n\004name\030\003 \001(\tR\001n\"n\n\016SessionMessage" +
-      "\022\030\n\014from_session\030\002 \001(\tR\002fs\022\026\n\nto_session" +
-      "\030\003 \001(\tR\002ts\022\022\n\007message\030\004 \001(\tR\001m\022\026\n\nsequen" +
-      "tial\030\010 \001(\010R\002se\"q\n\017SessionsMessage\022\030\n\014fro" +
-      "m_session\030\002 \001(\tR\002fs\022\030\n\013to_sessions\030\003 \003(\t" +
-      "R\003tss\022\022\n\007message\030\004 \001(\tR\001m\022\026\n\nsequential\030" +
-      "\010 \001(\010R\002se\"\251\001\n\013GetVoteMeta\022\023\n\007vote_id\030\001 \001" +
-      "(\tR\002vt\022\017\n\004name\030\002 \001(\tR\001n\022(\n\004data\030\003 \001(\0132\027." +
-      "google.protobuf.StructR\001d\022.\n\014vote_option" +
-      "s\030\004 \003(\0132\022.omega.Vote.OptionR\004vtos\022\032\n\ncre" +
-      "ated_at\030\005 \001(\003B\0020\001R\002ca\"]\n\013SetVoteMeta\022\023\n\007" +
+      "\"\267\001\n\016GetChannelMeta\022(\n\004data\030\001 \001(\0132\027.goog" +
+      "le.protobuf.StructR\001d\022\026\n\nchannel_id\030\002 \001(" +
+      "\tR\002ch\022\017\n\004name\030\003 \001(\tR\001n\022\025\n\006offset\030\004 \001(\003B\002" +
+      "0\001R\001o\022\032\n\ncreated_at\030\005 \001(\003B\0020\001R\002ca\022\037\n\005ski" +
+      "ll\030\013 \001(\0132\014.omega.SkillR\002sk\"\233\001\n\016SetChanne" +
+      "lMeta\022(\n\004data\030\001 \001(\0132\027.google.protobuf.St" +
+      "ructR\001d\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\017\n\004name\030" +
+      "\003 \001(\tR\001n\022\025\n\006offset\030\004 \001(\003B\0020\001R\001o\022\037\n\005skill" +
+      "\030\013 \001(\0132\014.omega.SkillR\002sk\"\017\n\rCreateChanne" +
+      "l\"\211\003\n\013JoinChannel\022\026\n\nchannel_id\030\002 \001(\tR\002c" +
+      "h\022\017\n\004name\030\003 \001(\tR\001n\0226\n\020channel_metadata\030\004" +
+      " \001(\0132\027.google.protobuf.StructR\003chm\022\025\n\nse" +
+      "ssion_id\030\005 \001(\tR\001s\022\024\n\007subject\030\006 \001(\tR\003sub\022" +
+      "\030\n\014subject_name\030\007 \001(\tR\002sn\0225\n\020session_met" +
+      "adata\030\010 \001(\0132\027.google.protobuf.StructR\002sm" +
+      "\022\016\n\003key\030\t \001(\tR\001k\022\017\n\004role\030\n \001(\tR\001r\022\025\n\006off" +
+      "set\030\013 \001(\003B\0020\001R\001o\022\032\n\ncreated_at\030\014 \001(\003B\0020\001" +
+      "R\002ca\022&\n\rroleIndicator\030\r \001(\0162\013.omega.Role" +
+      "R\002ri\022\037\n\005skill\030\016 \001(\0132\014.omega.SkillR\002sk\"T\n" +
+      "\014LeaveChannel\022\026\n\nchannel_id\030\002 \001(\tR\002ch\022\025\n" +
+      "\nsession_id\030\003 \001(\tR\001s\022\025\n\006offset\030\004 \001(\003B\0020\001" +
+      "R\001o\"M\n\014CloseChannel\022\026\n\nchannel_id\030\002 \001(\tR" +
+      "\002ch\022\016\n\003key\030\003 \001(\tR\001k\022\025\n\006offset\030\004 \001(\003B\0020\001R" +
+      "\001o\",\n\005Skill\022#\n\007tagging\030\001 \001(\0132\016.omega.Tag" +
+      "gingR\002tg\"\256\002\n\016ChannelMessage\022\026\n\nchannel_i" +
+      "d\030\002 \001(\tR\002ch\022\030\n\014from_session\030\003 \001(\tR\002fs\022\022\n" +
+      "\007message\030\004 \001(\tR\001m\022\025\n\006offset\030\005 \001(\003B\0020\001R\001o" +
+      "\022\024\n\007subject\030\006 \001(\tR\003sub\022\030\n\014subject_name\030\007" +
+      " \001(\tR\002sn\022\026\n\nsequential\030\010 \001(\010R\002se\022&\n\rrole" +
+      "Indicator\030\t \001(\0162\013.omega.RoleR\002ri\022.\n\010meta" +
+      "data\030\n \001(\0132\027.google.protobuf.StructR\003mta" +
+      "\022\037\n\005skill\030\013 \001(\0132\014.omega.SkillR\002sk\"\213\002\n\023Ch" +
+      "annelOwnerMessage\022\026\n\nchannel_id\030\002 \001(\tR\002c" +
+      "h\022\030\n\014from_session\030\003 \001(\tR\002fs\022\022\n\007message\030\004" +
+      " \001(\tR\001m\022\025\n\006offset\030\005 \001(\003B\0020\001R\001o\022\024\n\007subjec" +
+      "t\030\006 \001(\tR\003sub\022\030\n\014subject_name\030\007 \001(\tR\002sn\022\026" +
+      "\n\nsequential\030\010 \001(\010R\002se\022.\n\010metadata\030\n \001(\013" +
+      "2\027.google.protobuf.StructR\003mta\022\037\n\005skill\030" +
+      "\013 \001(\0132\014.omega.SkillR\002sk\"\210\001\n\014ChannelCount" +
+      "\022\026\n\nchannel_id\030\001 \001(\tR\002ch\022\027\n\013owner_count\030" +
+      "\002 \001(\005R\002oc\022\036\n\022participator_count\030\003 \001(\005R\002p" +
+      "c\022\020\n\005count\030\004 \001(\005R\001c\022\025\n\006offset\030\005 \001(\003B\0020\001R" +
+      "\001o\"\246\001\n\024ReplayChannelMessage\022\026\n\nchannel_i" +
+      "d\030\002 \001(\tR\002ch\022\030\n\010ended_at\030\003 \001(\003B\0020\001R\002ea\022\023\n" +
+      "\007next_id\030\004 \001(\tR\002ni\022 \n\006volume\030\005 \001(\0162\r.ome" +
+      "ga.VolumeR\001v\022\020\n\005count\030\006 \001(\005R\001c\022\023\n\007invers" +
+      "e\030\007 \001(\010R\002iv\"x\n\016GetSessionMeta\022(\n\004data\030\001 " +
+      "\001(\0132\027.google.protobuf.StructR\001d\022\025\n\nsessi" +
+      "on_id\030\002 \001(\tR\001s\022\024\n\007subject\030\003 \001(\tR\003sub\022\017\n\004" +
+      "name\030\004 \001(\tR\001n\"b\n\016SetSessionMeta\022(\n\004data\030" +
+      "\001 \001(\0132\027.google.protobuf.StructR\001d\022\025\n\nses" +
+      "sion_id\030\002 \001(\tR\001s\022\017\n\004name\030\003 \001(\tR\001n\"n\n\016Ses" +
+      "sionMessage\022\030\n\014from_session\030\002 \001(\tR\002fs\022\026\n" +
+      "\nto_session\030\003 \001(\tR\002ts\022\022\n\007message\030\004 \001(\tR\001" +
+      "m\022\026\n\nsequential\030\010 \001(\010R\002se\"q\n\017SessionsMes" +
+      "sage\022\030\n\014from_session\030\002 \001(\tR\002fs\022\030\n\013to_ses" +
+      "sions\030\003 \003(\tR\003tss\022\022\n\007message\030\004 \001(\tR\001m\022\026\n\n" +
+      "sequential\030\010 \001(\010R\002se\"\251\001\n\013GetVoteMeta\022\023\n\007" +
       "vote_id\030\001 \001(\tR\002vt\022\017\n\004name\030\002 \001(\tR\001n\022(\n\004da" +
-      "ta\030\003 \001(\0132\027.google.protobuf.StructR\001d\"\014\n\n" +
-      "CreateVote\"\217\002\n\010JoinVote\022\023\n\007vote_id\030\001 \001(\t" +
-      "R\002vt\022\017\n\004name\030\002 \001(\tR\001n\0223\n\rvote_metadata\030\003" +
-      " \001(\0132\027.google.protobuf.StructR\003vtm\022\025\n\nse" +
-      "ssion_id\030\004 \001(\tR\001s\0225\n\020session_metadata\030\005 " +
-      "\001(\0132\027.google.protobuf.StructR\002sm\022\016\n\003key\030" +
-      "\006 \001(\tR\001k\022\032\n\ncreated_at\030\010 \001(\003B\0020\001R\002ca\022.\n\014" +
-      "vote_options\030\t \003(\0132\022.omega.Vote.OptionR\004" +
-      "vtos\"7\n\tLeaveVote\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\025" +
-      "\n\nsession_id\030\002 \001(\tR\001s\"0\n\tCloseVote\022\023\n\007vo" +
-      "te_id\030\001 \001(\tR\002vt\022\016\n\003key\030\002 \001(\tR\001k\"\246\001\n\013Vote" +
-      "Message\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\030\n\014from_ses" +
-      "sion\030\002 \001(\tR\002fs\022\024\n\007subject\030\003 \001(\tR\003sub\022\022\n\007" +
-      "message\030\004 \001(\tR\001m\022\026\n\nsequential\030\010 \001(\010R\002se" +
-      "\022&\n\rroleIndicator\030\t \001(\0162\013.omega.RoleR\002ri" +
-      "\"}\n\nVoteSelect\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\025\n\ns" +
-      "ession_id\030\002 \001(\tR\001s\022\024\n\007subject\030\003 \001(\tR\003sub" +
-      "\022\033\n\016vote_option_id\030\004 \001(\tR\003vto\022\020\n\004deny\030\005 " +
-      "\001(\010R\002de\"`\n\tVoteCount\022\023\n\007vote_id\030\001 \001(\tR\002v" +
-      "t\022\016\n\003key\030\002 \001(\tR\001k\022.\n\014vote_options\030\003 \003(\0132" +
-      "\022.omega.Vote.OptionR\004vtos\"S\n\020VoteOwnerMe" +
-      "ssage\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\022\n\007message\030\002 " +
-      "\001(\tR\001m\022\026\n\nsequential\030\010 \001(\010R\002se\"I\n\nVoteSt" +
-      "atus\022\023\n\007vote_id\030\001 \001(\tR\002vt\022&\n\006status\030\002 \001(" +
-      "\0162\022.omega.Vote.StatusR\002st\"\211\001\n\004Vote\032V\n\006Op" +
-      "tion\022\r\n\002id\030\001 \001(\tR\001i\022\017\n\004name\030\002 \001(\tR\001n\022\020\n\005" +
-      "count\030\003 \001(\005R\001c\022\032\n\014subject_list\030\004 \003(\tR\004su" +
-      "bl\")\n\006Status\022\016\n\nStatusDeny\020\000\022\017\n\013StatusAl" +
-      "low\020\001*G\n\004Role\022\013\n\007RoleAll\020\000\022\r\n\tRoleAdmin\020" +
-      "\001\022\r\n\tRoleOwner\020\002\022\024\n\020RoleParticipator\020\003*\231" +
-      "\001\n\006Volume\022\016\n\nVolumePeek\020\000\022\020\n\014VolumeLowes" +
-      "t\020\001\022\r\n\tVolumeLow\020\002\022\023\n\017VolumeLowMedium\020\003\022" +
-      "\020\n\014VolumeMedium\020\004\022\024\n\020VolumeMediumHigh\020\005\022" +
-      "\016\n\nVolumeHigh\020\006\022\021\n\rVolumeHighest\020\007Bl\n\030co" +
-      "m.kklab.vd.kumoi.protoP\001ZNgitlab.com/kkl" +
-      "ab-com/venture-project/gundam/gundam-pro" +
-      "tobuf-golang/omega;omegab\006proto3"
+      "ta\030\003 \001(\0132\027.google.protobuf.StructR\001d\022.\n\014" +
+      "vote_options\030\004 \003(\0132\022.omega.Vote.OptionR\004" +
+      "vtos\022\032\n\ncreated_at\030\005 \001(\003B\0020\001R\002ca\"]\n\013SetV" +
+      "oteMeta\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\017\n\004name\030\002 \001" +
+      "(\tR\001n\022(\n\004data\030\003 \001(\0132\027.google.protobuf.St" +
+      "ructR\001d\"\014\n\nCreateVote\"\217\002\n\010JoinVote\022\023\n\007vo" +
+      "te_id\030\001 \001(\tR\002vt\022\017\n\004name\030\002 \001(\tR\001n\0223\n\rvote" +
+      "_metadata\030\003 \001(\0132\027.google.protobuf.Struct" +
+      "R\003vtm\022\025\n\nsession_id\030\004 \001(\tR\001s\0225\n\020session_" +
+      "metadata\030\005 \001(\0132\027.google.protobuf.StructR" +
+      "\002sm\022\016\n\003key\030\006 \001(\tR\001k\022\032\n\ncreated_at\030\010 \001(\003B" +
+      "\0020\001R\002ca\022.\n\014vote_options\030\t \003(\0132\022.omega.Vo" +
+      "te.OptionR\004vtos\"7\n\tLeaveVote\022\023\n\007vote_id\030" +
+      "\001 \001(\tR\002vt\022\025\n\nsession_id\030\002 \001(\tR\001s\"0\n\tClos" +
+      "eVote\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\016\n\003key\030\002 \001(\tR" +
+      "\001k\"\246\001\n\013VoteMessage\022\023\n\007vote_id\030\001 \001(\tR\002vt\022" +
+      "\030\n\014from_session\030\002 \001(\tR\002fs\022\024\n\007subject\030\003 \001" +
+      "(\tR\003sub\022\022\n\007message\030\004 \001(\tR\001m\022\026\n\nsequentia" +
+      "l\030\010 \001(\010R\002se\022&\n\rroleIndicator\030\t \001(\0162\013.ome" +
+      "ga.RoleR\002ri\"}\n\nVoteSelect\022\023\n\007vote_id\030\001 \001" +
+      "(\tR\002vt\022\025\n\nsession_id\030\002 \001(\tR\001s\022\024\n\007subject" +
+      "\030\003 \001(\tR\003sub\022\033\n\016vote_option_id\030\004 \001(\tR\003vto" +
+      "\022\020\n\004deny\030\005 \001(\010R\002de\"`\n\tVoteCount\022\023\n\007vote_" +
+      "id\030\001 \001(\tR\002vt\022\016\n\003key\030\002 \001(\tR\001k\022.\n\014vote_opt" +
+      "ions\030\003 \003(\0132\022.omega.Vote.OptionR\004vtos\"S\n\020" +
+      "VoteOwnerMessage\022\023\n\007vote_id\030\001 \001(\tR\002vt\022\022\n" +
+      "\007message\030\002 \001(\tR\001m\022\026\n\nsequential\030\010 \001(\010R\002s" +
+      "e\"I\n\nVoteStatus\022\023\n\007vote_id\030\001 \001(\tR\002vt\022&\n\006" +
+      "status\030\002 \001(\0162\022.omega.Vote.StatusR\002st\"\211\001\n" +
+      "\004Vote\032V\n\006Option\022\r\n\002id\030\001 \001(\tR\001i\022\017\n\004name\030\002" +
+      " \001(\tR\001n\022\020\n\005count\030\003 \001(\005R\001c\022\032\n\014subject_lis" +
+      "t\030\004 \003(\tR\004subl\")\n\006Status\022\016\n\nStatusDeny\020\000\022" +
+      "\017\n\013StatusAllow\020\001*G\n\004Role\022\013\n\007RoleAll\020\000\022\r\n" +
+      "\tRoleAdmin\020\001\022\r\n\tRoleOwner\020\002\022\024\n\020RoleParti" +
+      "cipator\020\003*\231\001\n\006Volume\022\016\n\nVolumePeek\020\000\022\020\n\014" +
+      "VolumeLowest\020\001\022\r\n\tVolumeLow\020\002\022\023\n\017VolumeL" +
+      "owMedium\020\003\022\020\n\014VolumeMedium\020\004\022\024\n\020VolumeMe" +
+      "diumHigh\020\005\022\016\n\nVolumeHigh\020\006\022\021\n\rVolumeHigh" +
+      "est\020\007Bl\n\030com.kklab.vd.kumoi.protoP\001ZNgit" +
+      "lab.com/kklab-com/venture-project/gundam" +
+      "/gundam-protobuf-golang/omega;omegab\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -459,7 +462,7 @@ public final class Omega {
     internal_static_omega_Hello_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_omega_Hello_descriptor,
-        new java.lang.String[] { "SessionId", "Subject", "SubjectName", });
+        new java.lang.String[] { "SessionId", "Subject", "SubjectName", "ServiceName", "ServiceVersion", "ServiceNodeName", });
     internal_static_omega_ServerTime_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_omega_ServerTime_fieldAccessorTable = new

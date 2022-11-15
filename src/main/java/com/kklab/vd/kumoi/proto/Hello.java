@@ -19,6 +19,9 @@ private static final long serialVersionUID = 0L;
     sessionId_ = "";
     subject_ = "";
     subjectName_ = "";
+    serviceName_ = "";
+    serviceVersion_ = "";
+    serviceNodeName_ = "";
   }
 
   @java.lang.Override
@@ -67,6 +70,24 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             subjectName_ = s;
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            serviceName_ = s;
+            break;
+          }
+          case 170: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            serviceVersion_ = s;
+            break;
+          }
+          case 178: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            serviceNodeName_ = s;
             break;
           }
           default: {
@@ -215,6 +236,120 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SERVICE_NAME_FIELD_NUMBER = 20;
+  private volatile java.lang.Object serviceName_;
+  /**
+   * <code>string service_name = 20[json_name = "srn"];</code>
+   * @return The serviceName.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceName() {
+    java.lang.Object ref = serviceName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string service_name = 20[json_name = "srn"];</code>
+   * @return The bytes for serviceName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceNameBytes() {
+    java.lang.Object ref = serviceName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SERVICE_VERSION_FIELD_NUMBER = 21;
+  private volatile java.lang.Object serviceVersion_;
+  /**
+   * <code>string service_version = 21[json_name = "srv"];</code>
+   * @return The serviceVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceVersion() {
+    java.lang.Object ref = serviceVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string service_version = 21[json_name = "srv"];</code>
+   * @return The bytes for serviceVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceVersionBytes() {
+    java.lang.Object ref = serviceVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SERVICE_NODE_NAME_FIELD_NUMBER = 22;
+  private volatile java.lang.Object serviceNodeName_;
+  /**
+   * <code>string service_node_name = 22[json_name = "srnn"];</code>
+   * @return The serviceNodeName.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceNodeName() {
+    java.lang.Object ref = serviceNodeName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceNodeName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string service_node_name = 22[json_name = "srnn"];</code>
+   * @return The bytes for serviceNodeName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceNodeNameBytes() {
+    java.lang.Object ref = serviceNodeName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceNodeName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -238,6 +373,15 @@ private static final long serialVersionUID = 0L;
     if (!getSubjectNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subjectName_);
     }
+    if (!getServiceNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 20, serviceName_);
+    }
+    if (!getServiceVersionBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 21, serviceVersion_);
+    }
+    if (!getServiceNodeNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 22, serviceNodeName_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -255,6 +399,15 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSubjectNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subjectName_);
+    }
+    if (!getServiceNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, serviceName_);
+    }
+    if (!getServiceVersionBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, serviceVersion_);
+    }
+    if (!getServiceNodeNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, serviceNodeName_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -277,6 +430,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSubject())) return false;
     if (!getSubjectName()
         .equals(other.getSubjectName())) return false;
+    if (!getServiceName()
+        .equals(other.getServiceName())) return false;
+    if (!getServiceVersion()
+        .equals(other.getServiceVersion())) return false;
+    if (!getServiceNodeName()
+        .equals(other.getServiceNodeName())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -294,6 +453,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSubject().hashCode();
     hash = (37 * hash) + SUBJECT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getSubjectName().hashCode();
+    hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceName().hashCode();
+    hash = (37 * hash) + SERVICE_VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceVersion().hashCode();
+    hash = (37 * hash) + SERVICE_NODE_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceNodeName().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -433,6 +598,12 @@ private static final long serialVersionUID = 0L;
 
       subjectName_ = "";
 
+      serviceName_ = "";
+
+      serviceVersion_ = "";
+
+      serviceNodeName_ = "";
+
       return this;
     }
 
@@ -462,6 +633,9 @@ private static final long serialVersionUID = 0L;
       result.sessionId_ = sessionId_;
       result.subject_ = subject_;
       result.subjectName_ = subjectName_;
+      result.serviceName_ = serviceName_;
+      result.serviceVersion_ = serviceVersion_;
+      result.serviceNodeName_ = serviceNodeName_;
       onBuilt();
       return result;
     }
@@ -520,6 +694,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSubjectName().isEmpty()) {
         subjectName_ = other.subjectName_;
+        onChanged();
+      }
+      if (!other.getServiceName().isEmpty()) {
+        serviceName_ = other.serviceName_;
+        onChanged();
+      }
+      if (!other.getServiceVersion().isEmpty()) {
+        serviceVersion_ = other.serviceVersion_;
+        onChanged();
+      }
+      if (!other.getServiceNodeName().isEmpty()) {
+        serviceNodeName_ = other.serviceNodeName_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -775,6 +961,234 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       subjectName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object serviceName_ = "";
+    /**
+     * <code>string service_name = 20[json_name = "srn"];</code>
+     * @return The serviceName.
+     */
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string service_name = 20[json_name = "srn"];</code>
+     * @return The bytes for serviceName.
+     */
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string service_name = 20[json_name = "srn"];</code>
+     * @param value The serviceName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      serviceName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string service_name = 20[json_name = "srn"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceName() {
+      
+      serviceName_ = getDefaultInstance().getServiceName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string service_name = 20[json_name = "srn"];</code>
+     * @param value The bytes for serviceName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      serviceName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object serviceVersion_ = "";
+    /**
+     * <code>string service_version = 21[json_name = "srv"];</code>
+     * @return The serviceVersion.
+     */
+    public java.lang.String getServiceVersion() {
+      java.lang.Object ref = serviceVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string service_version = 21[json_name = "srv"];</code>
+     * @return The bytes for serviceVersion.
+     */
+    public com.google.protobuf.ByteString
+        getServiceVersionBytes() {
+      java.lang.Object ref = serviceVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string service_version = 21[json_name = "srv"];</code>
+     * @param value The serviceVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceVersion(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      serviceVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string service_version = 21[json_name = "srv"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceVersion() {
+      
+      serviceVersion_ = getDefaultInstance().getServiceVersion();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string service_version = 21[json_name = "srv"];</code>
+     * @param value The bytes for serviceVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      serviceVersion_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object serviceNodeName_ = "";
+    /**
+     * <code>string service_node_name = 22[json_name = "srnn"];</code>
+     * @return The serviceNodeName.
+     */
+    public java.lang.String getServiceNodeName() {
+      java.lang.Object ref = serviceNodeName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceNodeName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string service_node_name = 22[json_name = "srnn"];</code>
+     * @return The bytes for serviceNodeName.
+     */
+    public com.google.protobuf.ByteString
+        getServiceNodeNameBytes() {
+      java.lang.Object ref = serviceNodeName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceNodeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string service_node_name = 22[json_name = "srnn"];</code>
+     * @param value The serviceNodeName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceNodeName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      serviceNodeName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string service_node_name = 22[json_name = "srnn"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceNodeName() {
+      
+      serviceNodeName_ = getDefaultInstance().getServiceNodeName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string service_node_name = 22[json_name = "srnn"];</code>
+     * @param value The bytes for serviceNodeName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceNodeNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      serviceNodeName_ = value;
       onChanged();
       return this;
     }

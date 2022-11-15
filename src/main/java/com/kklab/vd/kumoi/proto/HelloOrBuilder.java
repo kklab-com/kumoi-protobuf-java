@@ -42,4 +42,40 @@ public interface HelloOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSubjectNameBytes();
+
+  /**
+   * <code>string service_name = 20[json_name = "srn"];</code>
+   * @return The serviceName.
+   */
+  java.lang.String getServiceName();
+  /**
+   * <code>string service_name = 20[json_name = "srn"];</code>
+   * @return The bytes for serviceName.
+   */
+  com.google.protobuf.ByteString
+      getServiceNameBytes();
+
+  /**
+   * <code>string service_version = 21[json_name = "srv"];</code>
+   * @return The serviceVersion.
+   */
+  java.lang.String getServiceVersion();
+  /**
+   * <code>string service_version = 21[json_name = "srv"];</code>
+   * @return The bytes for serviceVersion.
+   */
+  com.google.protobuf.ByteString
+      getServiceVersionBytes();
+
+  /**
+   * <code>string service_node_name = 22[json_name = "srnn"];</code>
+   * @return The serviceNodeName.
+   */
+  java.lang.String getServiceNodeName();
+  /**
+   * <code>string service_node_name = 22[json_name = "srnn"];</code>
+   * @return The bytes for serviceNodeName.
+   */
+  com.google.protobuf.ByteString
+      getServiceNodeNameBytes();
 }
